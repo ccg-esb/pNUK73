@@ -1,4 +1,4 @@
-# pNUK73: A Metropolis-Hastings implementation to fit a Monod model to a bacterial growth curve
+# pNUK73: A Metropolis-Hastings MCMC implementation to fit a Monod model to a bacterial growth curve
 # Version: 1.0.1
 # Date: 2014-07-31
 #
@@ -8,7 +8,7 @@
 # This script receives parameters from command line and executes MH_MCMC.R
 # 
 # Example: 
-# $ Rscript runMe.R dataFile="../data/OD600_B.csv" w.prior="uniform" n.clones=1 
+# $ Rscript runMCMC.R dataFile="../data/OD600_B.csv" w.prior="uniform" N=1e6
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 # You should have received a copy of the GNU General Public License
-#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ############################################
 # Receives and parses arguments from command line
@@ -81,7 +81,11 @@ time.taken <- end.time- start.time
 print(noquote("MCMC Done...")) # Execution time
 print(noquote(time.taken)) # Execution time
 
-######
+############################################
 # Save variables into a file
 save.image(file=paste(runDir,"/MCMC.RData", sep=""))
 print(noquote(paste("image saved in ",paste(runDir,"/MCMC.RData", sep="")))) # Execution time
+
+############################################
+# Produce MCMC diagnostic plots
+source("plotMCMC.R")

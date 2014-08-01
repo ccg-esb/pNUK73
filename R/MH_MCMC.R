@@ -1,4 +1,4 @@
-# pNUK73: A Metropolis-Hastings implementation to fit a Monod model to a bacterial growth curve
+# pNUK73: A Metropolis-Hastings MCMC implementation to fit a Monod model to a bacterial growth curve
 # Version: 1.0.1
 # Date: 2014-07-31
 #
@@ -6,7 +6,7 @@
 # Copyright 2014. All rights reserved.
 #
 # pNUK73 provides a simple MCMC method to estimate growth kinetic parameters (mu, Ks, rho) 
-#	that fit growth curve measured as bacterial optical density.
+# that fit growth curve measured as bacterial optical density.
 #
 # In particular we want to make inference about the following parameters: 
 # bar(mu), K, rho: Basic growth kinetic parameters of a single bacterial type growing under a single-limiting resource
@@ -26,7 +26,7 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 # You should have received a copy of the GNU General Public License
-#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ############################################
 
