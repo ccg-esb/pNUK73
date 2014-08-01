@@ -86,6 +86,7 @@ lines(c(inix$rho, vardownrho),col="gray")
 lines(c(inix$rho, meanxrho$mean),type="l",main=expression("rho"),lw=3)
 dev.off()
 
+######
 #Plots running mean and variance for rho
 xmuK<-posterior.samples$muK[1:Nx]
 meanxmuK<-updatevar(xmuK,2)
@@ -100,7 +101,6 @@ lines(c(inix$muK, varupmuK),col="gray")
 lines(c(inix$muK, vardownmuK),col="gray")
 lines(c(inix$muK, meanxmuK$mean),type="l",main=expression("muK"),lw=3)
 dev.off()
-
 
 ######
 # Plots 2D distribution 
@@ -135,25 +135,16 @@ dev.off()
 
 ######
 # Plots chain autocorrelation
-
-
 pdf(paste(runDir,'/figures/autocorrelation.pdf', sep = ""),width = 7, height = 7,pointsize = 12, bg = "white", useDingbats=FALSE, family="sans")
 layout(matrix(1:2, ncol = 1), widths = 1, heights = c(1,1), respect = FALSE)
 par(mar=c(1, 5, 5.1, 1))
 
-#par(mfrow=c(2,1), mar= c(1,5,3,5), oma=c(3,.1,.1,.1),mgp = c(1, 0, 0))
-
 r <- acf(posterior.samples$muK,plot=F, lag.max=100)
 plot(r$lag[2:length(r$acf)], r$acf[2:length(r$acf)], type = "h", lwd = 2, col = "black", ylab = "",xaxt="n",cex.lab=2,cex.main=2, cex.axis = 1.25, family = "sans")
 axis(side = 1, tck = -.05, labels = NA)
-
 ci <- .95 
 clim <- qnorm( (1+ci) / 2 ) / sqrt(r$n.used)
 abline(h = c(-1,1) * clim, lty = 2, col = "black", lwd = .5)
-#axis(side = 2, tck = -.05, at = c(-round(clim,3),0,round(clim,3)),cex.axis=1.25)
-#u <- par("usr")
-#text(90,u[4],labels = expression(rho),col = "black",pos = 1,cex=2)
-
 
 par(mar=c(5.1, 5, 1, 1))
 r <- acf(posterior.samples$rho,plot=F, lag.max=100)
@@ -166,8 +157,6 @@ u <- par("usr")
 #text(90,u[4],labels = expression(bar(mu)/K),col = "black",pos = 1,cex=2)
 mtext("Autocorrelation", line=3, side=2, cex=2, at=u[4], family = "sans")
 dev.off()
-
-
 
 ######
 # Plots 6 randomly selected runs
