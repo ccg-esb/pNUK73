@@ -1,8 +1,19 @@
-Data obtained by Alvaro San Millan (Oxford) 
+Data obtained by Alvaro San Millan and Craig MacLean (Oxford) 
 
 Growth curves were done using a BioTek Synergy H4 plate reader (BioTek Instruments, Potton, UK) using 96 well-plates; overnight cultures of the different clones were diluted 1:100 in LB broth (Fisher Scientific, NJ, USA) and OD600 was measured every 20 min for 18 hours at 37°C.
 Strains used are the following: 
-Parental, plasmid-bearing (Bp)PAO1/pNUK73Parental, plasmid-free (B)PAO1Compensated, plasmid-bearing (Cp)30-_1_1,30-_1_2,30-_1_3,30-_2_1,30-_2-2, 30-_2_3,30-_3_1,30-_3_2,30-_3_2Compensate, plasmid-free (C)30+_1_1, 30+_1_2, 30+_2_1, 30+_2_2, 30+_3_1, 30+_3_3
+
+Parental, plasmid-bearing (Bp)
+PAO1/pNUK73
+
+Parental, plasmid-free (B)
+PAO1
+
+Compensated, plasmid-bearing (Cp)
+30-_1_1,30-_1_2,30-_1_3,30-_2_1,30-_2-2, 30-_2_3,30-_3_1,30-_3_2,30-_3_2
+
+Compensate, plasmid-free (C)
+30+_1_1, 30+_1_2, 30+_2_1, 30+_2_2, 30+_3_1, 30+_3_3
 
 More information:
 Positive selection and compensatory adaptation interact to stabilize non-transmissible plasmids. 
