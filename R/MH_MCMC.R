@@ -152,7 +152,7 @@ colnames(posterior.samples)<-c(names(as.vector(parameters)),"LL")
 
 ######
 # it will run without saving values until every parameter is inside the tolerated interval
-target.hit<-list(rho=F, muK=F, disp=F) 
+target.hit<-list(rho=False, muK=False, disp=False) 
 
 #variables that store the number of accepted moves for each variable
 rho.moves.accepted<-0
